@@ -1,198 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .header {background-color: blue;}
+    .body{background-color: red;}
+    .footer{background-color: rgb(27, 212, 197);}
+      </style>
 </head>
-<body>
-    <h1>Elementos presente en HTML</h1>
-    <h3>HTML representa la raiz.  </h3><br>
+<body class="body">
+  <header class="header"> titulo de la pagina</header>
+ 
+  <table>
+    <h1>tabla de datos</h1>
+    <tr>
+    <th>1</th>
+    <th>2</th>
 
-
-    <header>
-      <h1>titulo o testada principal de la magina</h1>
-      <nav>
-        <h1>menu de navegacion</h1>
-          <p>navegador</p>
-      </nav>
-  </header>
-
-  <main>
-    <h1>la etiqueta "main" se usa comúnmente en HTML5 como una forma de marcar el contenido principal de una página. La etiqueta "main" se utiliza para indicar al navegador que el contenido dentro de ella es el contenido principal de la página.</h1>
-      <aside>
-       <h1> la etiqueta "aside" se utiliza para indicar contenido que está relacionado pero que no es esencial para el flujo principal del contenido de la página. La etiqueta "aside" se utiliza para agrupar contenido que se puede considerar como complementario al contenido principal de la página. <br></h1>
-          <div style="background-color: blue;border: 5px outset red">
-              <p style="color: wheat;">Hola</p>
-          </div>
-          <div style="background-color: black;">
-              <p style="color: chartreuse;">chao</p>
-          </div>
-      </aside>
-      <section>
-          <article>
-              <figure>
-                  <img src="su57.jpg" alt="avion ruso de 5ta gen" srcset="" height="300px">
-              </figure>
-          </article>
-          <article>
-              <figure>
-                  <audio controls>
-
-                      <source src="musica.mp3" type="audio/mpeg">
-                      Your browser does not support the audio tag.
-                  </audio>
-              </figure>
-          </article>
-          <article>
-              <figure>
-                  <p>This is normal text - <b>and this is bold text</b>.</p>
-                  <br>
-                  <blockquote cite="http://www.worldwildlife.org/who/index.html">
-                      For 50 years, WWF has been protecting the future of nature. The world's leading conservation
-                      organization, WWF works in 100 countries and is supported by 1.2 million members in the United
-                      States and close to 5 million globally.
-                  </blockquote>
-                  <br>
-                  <p>The HTML <code>button</code> tag defines a clickable button.</p>
-
-                  <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
-
-                  <br>
-                  <iframe src="https://www.x-codec.net" title="W3Schools Free Online Web Tutorials" width="600px"
-                      height="800px"></iframe>
-                  <br>
-                  <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
-
-                  <br>
-
-                  <label for="file">Downloading progress:</label>
-                  <progress id="file" value="32" max="100"> 32% </progress>
-
-                  <br>
-                  <label for="cars">Choose a car:</label>
-
-                  <select name="cars" id="cars">
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes" selected>Mercedes</option>
-                      <option value="audi">Audi</option>
-                  </select>
-
-                  <br>
-
-                  <table>
-                      <tr>
-                          <th>Month</th>
-                          <th>Savings</th>
-                      </tr>
-                      <tr>
-                          <td>January</td>
-                          <td>$100</td>
-                      </tr>
-                      <tr>
-                          <td>February</td>
-                          <td>$80</td>
-                      </tr>
-                  </table>
-
-                  <br>
-                  <video controls>
-                      <source src="video.mp4" type="video/mp4">
-
-                      Your browser does not support the video tag.
-                  </video>
-                  <br>
-                  <p>My mother has <span style="color:blue">blue</span> eyes.</p>
-                  <br>
-                  <strong>This text is important!</strong>
-                  <br>
-                  <p>This is some normal text.</p>
-                  <p><small>This is some smaller text.</small></p>
-                  <br>
-                  <dialog open>This is an open dialog window</dialog>
-                  <br>
-                  <p>This text contains <sub>subscript</sub> text.</p>
-<br>
-<p>This text contains <sup>superscript</sup> text.</p>
-<br>
-<ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-<br>
-<ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol>
-
-<ol start="50">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol>
-
-<br>
-<ol type="I">
-  <li>Coffee</li>
-  <li>Tea
-    <ul>
-      <li>Black tea</li>
-      <li>Green tea</li>
-    </ul>
-  </li>
-  <li>Milk</li>
-</ol>
-
-<br>
-<dl>
-  <dt>Coffee</dt>
-  <dd>Black hot drink</dd>
-  <dt>Milk</dt>
-  <dd>White cold drink</dd>
-</dl>
-
-<br>
-<br>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th colspan="2">Phone</th>
   </tr>
-  <tr>
-    <td>John Doe</td>
-    <td>john.doe@example.com</td>
-    <td>123-45-678</td>
-    <td>212-00-546</td>
-  </tr>
+<tr>
+  <th>3</th>
+  <th>4</th>
+</tr>
 </table>
 
-<br>
-<br>
-<details>
-  <summary>Epcot Center</summary>
-  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</details>
-              </figure>
-          </article>
-      </section>
-  </main>
-  <footer>
-    <h1>contenido del pie</h1>
-      <address>
-          Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
-          Visit us at:<br>
-          <a href="https://www.x-codec.net" target="_blank">x-codec.net</a> <br>
-          Box 564, Disneyland<br>
-          USA
-      </address>
-  </footer>
-  <script>
-      alert("Hola desde el alert")
-      </script>
+<div>
+  <h1>title modifica la pestagna de la pagina q abriremos</h1>
+  <h1> div nos identifica una seccion dentro del body</h1>
+  <p> p: la etiqueta que se utiliza para marcar los párrafos de texto.
+    <img> img:  la etiqueta que se utiliza para insertar imágenes en una página web.
+<ul> y <li>:ul y li las etiquetas que se utilizan para crear listas sin ordenar.
+<ol> y <li>: ol y li las etiquetas que se utilizan para crear listas ordenadas.
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">contenido del pie de la pagina</footer>
 </body>
 </html>
