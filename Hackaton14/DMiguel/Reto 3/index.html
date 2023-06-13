@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/normalize.css">
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="contenido-nav">
+            <h1 class="contenido-nav-title">
+                Video Pacha TV
+            </h1>
+            <button type="button" class="btn btn-danger contenido-nav-addPet btn-danger-adapt" data-bs-toggle="modal"
+                data-bs-target="#newVideo">
+                Agregar Video
+            </button>
+        </div>
+        <div class="contenido-button-addPet">
+            <button type="button" class="btn btn-danger contenido-addPet btn-danger-adapt" data-bs-toggle="modal"
+                data-bs-target="#newVideo">
+                Agregar Video
+            </button>
+        </div>
+        <div class="contenido-addPost">
+            <div class="modal fade " id="newVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Agregar Vido</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" class="form-control modal-body-title" id="inputtitle"
+                                aria-describedby="textlHelp" placeholder="title">
+                            <input type="text" class="form-control modal-body-URL" id="inputURL"
+                                aria-describedby="textlHelp" placeholder="URL">
+                            <textarea class="form-control modal-body-texto" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Sobre él/ella"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger">Aceptar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade " id="editVideo" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Vido</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" class="form-control modal-body-title" id="inputtitle"
+                                aria-describedby="textlHelp" placeholder="title">
+                            <input type="text" class="form-control modal-body-URL" id="inputURL"
+                                aria-describedby="textlHelp" placeholder="URL">
+                            <textarea class="form-control modal-body-texto" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Sobre él/ella"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger">Aceptar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenido-posts row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="./source/image/imagen-test.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-danger contenido-nav-addPet" data-bs-toggle="modal" data-bs-target="#editVideo">
+                                Editar Video
+                            </button>
+                            <div class="footer__btn-opt">
+                                <button type="button" class="btn" aria-label="Close">
+                                    <i class="gg-close"></i>
+                                </button>
+                                <button type="button" class="btn" aria-label="Edit">
+                                    <i class="gg-play-list-add"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

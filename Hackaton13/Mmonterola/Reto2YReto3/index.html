@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 13 Max Monterola</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="headerr">
+            <div class="dog">Dog Crud</div>
+            <div class="Bagregar"><button id="openPopup">Agregar Mascota</button></div>
+        </div>
+    </header>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+
+            <!--Agregar mascota-->
+
+            <div class="popup-Agregar">
+                <div class="popup-Agregar1>">
+                    <h2>Agregar Mascota</h2>
+                </div>
+                <div class="popup-Agregar2>"><span class="close" id="closeButton">&times;</span> </div>
+            </div>
+            <div class="popup-content-uno">
+                <div class="popup-content-uno1"><input id="nombreImput" type="text" placeholder=" Nombre"></div>
+                <div class="popup-content-uno2"><input id="apellidoImput" type="text" placeholder=" Apellido"></div>
+            </div>
+            <div class="popup-content-dos">
+                <div class="popup-content-dos1"><input id="razaImput" type="text" placeholder=" Raza"></div>
+                <div class="popup-content-dos2"><input id="telefonoImput" type="text" placeholder=" Telefono"></div>
+            </div>
+            <div class="popup-content-tres">
+                <div class="popup-content-tres1"> <input id="paisImput" list="paises" name="pais" placeholder=" País"
+                        class="country-input">
+                    <datalist id="paises">
+                        <option value="Perú">
+                        <option value="Argentina">
+                        <option value="Brasil">
+                        <option value="Chile">
+                        <option value="Colombia">
+                        <option value="México">
+                    </datalist>
+                </div>
+                <div class="popup-content-tres2"><input id="fotoImput" type="text" placeholder=" URL de fotografía">
+                </div>
+            </div>
+            <div class="popup-content-text">
+                <textarea id="descripciontext" class="custom-textarea" placeholder=" Sobre él/ella"></textarea>
+                <span class="character-count">120 caracteres restantes</span>
+            </div>
+            <div class="buttons">
+                <button id="acceptButton">Aceptar</button>
+                <button id="cancelButton">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="recuadros-container"></div>
+
+    <div id="confirmPopup" class="popup">
+        <div class="popup-content">
+          <p>¿Estás seguro de que quieres eliminar esta mascota?</p>
+          <div class="buttons">
+            <button id="confirmDeleteButton">Sí</button>
+            <button id="cancelDeleteButton">No</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

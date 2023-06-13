@@ -1,0 +1,29 @@
+.header-nav {
+  background-color: #C4C4C4;
+}
+
+.button_agregarMascota {
+  background-color: #C4C4C4;
+  margin-top: 17em;
+  border: 0;
+  width: 244px;
+  height: 67px;
+}
+.button_modal {
+  background-color: #C4C4C4;
+  margin-top: 0em;
+  border: 0;
+  width: 129px;
+  height: 41px;
+}
+
+.card .card-img-top {
+  height: 140px;
+  width: 140px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

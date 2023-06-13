@@ -1,0 +1,34 @@
+$plomo: #C4C4C4;
+
+@mixin button-style($margin-top, $width, $height) {
+    background-color: $plomo;
+    margin-top: $margin-top;
+    border: 0;
+    width: $width;
+    height: $height;
+}
+
+.header-nav {
+    background-color: $plomo;
+}
+
+.button {
+    &_agregarMascota {
+        @include button-style(17em, 244px, 67px);
+    }
+
+    &_modal {
+        @include button-style(0em, 129px, 41px);
+    }
+}
+
+.card {
+    .card-img-top {
+        height: 140px;
+        width: 140px;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

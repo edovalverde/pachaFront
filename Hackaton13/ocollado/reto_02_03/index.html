@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Crud</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="header-nav d-flex justify-content-between align-items-center">
+            <h2 class="ms-4">Dog Crud</h2>
+            <div id="btnAgregarMascota" class="me-4 cursor-pointer d-none" data-formtype = "add">
+                <h6>Agregar mascota</h6>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container mt-4">
+            <div class="d-flex justify-content-center align-items-center">
+                <button id="btnAgregarMascotaCenter" type="button" class="button_agregarMascota" data-bs-toggle="modal"
+                    data-bs-target="#idModalAgregarEditar" data-formtype = "edit">Agregar mascota</button>
+            </div>
+            <div id="idListaPerros" class="row gy-4 pb-5">
+                <!--TODO lista Perros-->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Nueva/Editar Mascota -->
+    <div class="modal fade" id="idModalAgregarEditar" tabindex="-1" aria-labelledby="modalMascotaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="idModalAgregarEditarLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formMascota">
+                        <div class="container">
+                            <div class="row gy-4 pb-5">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="idFirstNamePet"
+                                        aria-describedby="firstNamePet" placeholder="Nombre" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="idLastNamePet"
+                                        aria-describedby="lastNamePet" placeholder="Apellido" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="idRace" aria-describedby="racePet"
+                                        placeholder="Raza" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="idPhone" aria-describedby="phonePet"
+                                        placeholder="Teléfono" required>
+                                </div>
+                                <div class="col-6">
+                                    <select class="form-select" id="idCountry" aria-label="Seleccionar pais" required>
+                                        <option value="" selected>País</option>
+                                        <option value="PE">Perú</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="VE">Venezuela</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="idUrlPhotography"
+                                        aria-describedby="urlPhotographyPet" placeholder="Url de fotografía" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" id="idAboutHimHer" rows="3"
+                                        placeholder="Sobre él/ella" required></textarea>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-evenly align-items-center">
+                                <button type="submit" class="button_modal">Aceptar</button>
+                                <button type="button" class="button_modal" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar Mascota -->
+    <div class="modal fade" id="idModalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="formEliminarMascota" action="#">
+                        <div class="container">
+                            <div class="text-center">
+                                <p>Estas seguro de eliminar a esta mascota??</p>
+                            </div>
+                            <div class="d-flex justify-content-evenly align-items-center">
+                                <button id="btnAceptarEliminarMascota" type="submit" class="button_modal">Aceptar</button>
+                                <button type="button" class="button_modal" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
