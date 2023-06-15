@@ -1,85 +1,89 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import headerPage from '@/components/headerPage.vue'
+import portafolio from '@/components/portafolio.vue'
+import about from '@/components/about.vue'
+import contact from '@/components/contact.vue'
+import footerPage from '@/components/footer.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <headerPage/>
+    <div class="content-wrapper">
+      <portafolio/>
+      <contact/>
+      <footerPage/>
     </div>
-  </header>
-
-  <RouterView />
+    <RouterView/>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+
+/* HERE ENDS THE MAGIC */
+
+.content-wrapper{
+    background-color: white;
+    top: 87%;
+    min-height: 12%;
+    position:absolute;
+    z-index: 2;
+    width: 100%;    
+}
+section {
+    padding: 100px 0;    
+    width: 100%;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+hr.star-light {
+    border-color: #fff;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+hr.star-light:after {
+    color: #fff;
+    background-color: #18bc9c;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+hr.star-primary {
+    border-color: #2c3e50;
 }
 
-nav a:first-of-type {
-  border: 0;
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
+section.primary h2{    
+    color: #2c3e50;
+    }
+    
+section.success{
+    background-color: #18bc9c;
+    color: #fff;
+    }
 </style>
