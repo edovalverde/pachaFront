@@ -90,10 +90,10 @@ function mostrarMascotas() {
 
     let contenidoHTML = "<div class='carta'>";
     contenidoHTML += "<button class=`btmMod` onclick='modificarMascota(" + i + ")'>Modificar</button>";
-    contenidoHTML += "<button class=`btmEli` onclick='eliminarMascota(" + i + ")'>Eliminar</button>";
+    contenidoHTML += "<button class=`btmEli` onclick='eliminarMascota(" + i + ")' style='margin-left: 121px;'>Eliminar</button>";
 
     contenidoHTML += "<h2>Mascota " + (i + 1) + "</h2>";
-    contenidoHTML += "<p><img src='" + mascota.foto + "' ></p>";
+    contenidoHTML += "<p><img src='" + mascota.foto + "' class='imgMasco'></p>";
     contenidoHTML += "<p><strong>Nombre:</strong> " + mascota.nombre + "</p>";
     contenidoHTML += "<p><strong>Apellido:</strong> " + mascota.apellido + "</p>";
     contenidoHTML += "<p><strong>Email:</strong> " + mascota.email + "</p>";
@@ -143,6 +143,7 @@ function eliminarMascota(index) {
 
   mostrarMascotas();
 }
+
 
 document.getElementById("openModal").addEventListener("click", function() {
   modal.style.display = "block";
